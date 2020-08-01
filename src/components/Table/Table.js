@@ -16,7 +16,19 @@ export default function Table(props) {
                 </thead>
 
                 <tbody>
-                    {props.users.map(user => <User image={user.image} name={user.name} department={user.department} role={user.role} email={user.email} />)}
+
+                    {props.users.map(user => {
+                        let profileImage;
+
+                        if (user.image === undefined) {
+                            profileImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7E2PbZHE_mk95sIV_9XZ4bKXjouSf7XDDCw&usqp=CAU"
+                        } else {
+                            profileImage = user.image;
+                        }
+
+                        return <User image={profileImage} firstName={user.firstName} lastName={user.lastName} department={user.department} role={user.role} email={user.email} />
+                    })}
+
                 </tbody>
 
             </table>
