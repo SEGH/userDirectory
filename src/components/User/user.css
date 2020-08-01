@@ -3,3 +3,7 @@ img {
     width: 100px;
     object-fit: cover;
 }
+
+h4 {
+    margin-top: 1.5em;
+}
