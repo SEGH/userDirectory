@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function User() {
+export default function User(props) {
     return (
         <tr>
-            <td>Tom Silva</td>
-            <td>Contractor</td>
-            <td>tommy@toh.com</td>
+            <td>{props.name}</td>
+            <td>{props.role}</td>
+            <td>{props.email}</td>
         </tr>
     )
 }
