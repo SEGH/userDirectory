@@ -18,3 +18,11 @@ img {
     width: 100px;
     object-fit: cover;
 }
+
+form {
+    margin-top: 1em;
+}
+
+.input-field input[type=search]:focus {
+    border-radius: 30px;
+}
