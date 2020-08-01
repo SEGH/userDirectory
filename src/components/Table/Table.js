@@ -16,11 +16,7 @@ export default function Table(props) {
                 </thead>
 
                 <tbody>
-                    <User image={Users[0].image} name={Users[0].name} role={Users[0].role} email={Users[0].email} />
-                    <User image={Users[1].image} name={Users[1].name} role={Users[1].role} email={Users[1].email} />
-                    <User image={Users[2].image} name={Users[2].name} role={Users[2].role} email={Users[2].email} />
-                    <User image={Users[3].image} name={Users[3].name} role={Users[3].role} email={Users[3].email} />
-                    <User image={Users[4].image} name={Users[4].name} role={Users[4].role} email={Users[4].email} />
+                    {Users.map(user => <User image={user.image} name={user.name} role={user.role} email={user.email} />)}
                 </tbody>
 
             </table>
