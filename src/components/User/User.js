@@ -8,6 +8,7 @@ export default function User(props) {
                 <img src={props.image} className="circle left z-depth-2" />
                 <h4 className="flow-text center-align">{props.name}</h4>
             </td>
+            <td>{props.department}</td>
             <td>{props.role}</td>
             <td>{props.email}</td>
         </tr>

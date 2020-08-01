@@ -9,13 +9,14 @@ export default function Table(props) {
                 <thead>
                     <tr>
                         <th>Name</th>
+                        <th>Department</th>
                         <th>Role</th>
                         <th>Email</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    {props.users.map(user => <User image={user.image} name={user.name} role={user.role} email={user.email} />)}
+                    {props.users.map(user => <User image={user.image} name={user.name} department={user.department} role={user.role} email={user.email} />)}
                 </tbody>
 
             </table>
