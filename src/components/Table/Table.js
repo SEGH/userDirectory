@@ -1,6 +1,5 @@
 import React from "react";
 import User from "../User/User";
-import Users from "../../users.json";
 
 export default function Table(props) {
     return (
@@ -16,7 +15,7 @@ export default function Table(props) {
                 </thead>
 
                 <tbody>
-                    {Users.map(user => <User image={user.image} name={user.name} role={user.role} email={user.email} />)}
+                    {props.users.map(user => <User image={user.image} name={user.name} role={user.role} email={user.email} />)}
                 </tbody>
 
             </table>
