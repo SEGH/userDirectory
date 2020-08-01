@@ -1,9 +1,20 @@
-.brand-logo {
+.brand-logo span {
     font-family: 'Cinzel', serif;
     font-size: 3rem !important;
+    width: 100%;
+    line-height: 2.1;
+    padding-left: .5em;
 }
 
 nav {
-    height: 10em;
     margin-bottom: 5em;
+    height: 10em;
+    padding-top: 2em;
+    padding-bottom: .5em;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
 }
