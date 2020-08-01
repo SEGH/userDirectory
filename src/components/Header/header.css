@@ -1,9 +1,12 @@
 .brand-logo span {
     font-family: 'Cinzel', serif;
-    font-size: 3rem !important;
     width: 100%;
-    line-height: 2.1;
     padding-left: .5em;
+}
+
+#largeTitle {
+    font-size: 3rem !important;
+    line-height: 2.1;
 }
 
 nav {

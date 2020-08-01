@@ -10,7 +10,8 @@ export default function Header(props) {
                 <div className="nav-wrapper">
                     <a href="http://localhost:3000/#" className="brand-logo center">
                         <img src={props.companyLogo} className="circle left z-depth-5" />
-                        <span className="flow-text">{props.companyName} Directory</span>
+                        <span className="flow-text hide-on-med-and-down" id="largeTitle">{props.companyName} Directory</span>
+                        <span className="flow-text hide-on-large-only">{props.companyName} Directory</span>
                     </a>
                 </div>
 
