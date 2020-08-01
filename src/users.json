@@ -72,5 +72,56 @@
                 "email": "jtomlin@toh.com"
             }
         ]
+    },
+
+    {
+        "company": "POSE",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/PoseTitleScreen.png/250px-PoseTitleScreen.png",
+        "users": [
+            {
+                "firstName": "Mj",
+                "lastName": "Rodriguez",
+                "image": "https://pmcvariety.files.wordpress.com/2019/06/mj-rodriguez-16x9.jpg?w=681&h=383&crop=1",
+                "department": "Cast",
+                "role": "Blanca",
+                "email": "mj@pose.com"
+            },
+
+            {
+                "firstName": "Indya",
+                "lastName": "Moore",
+                "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/elm060119wl-indya0005-1557345568.jpg?crop=1.00xw:0.395xh;0,0.0501xh&resize=640:*",
+                "department": "Cast",
+                "role": "Angel",
+                "email": "indya@pose.com"
+            },
+
+            {
+                "firstName": "Billy",
+                "lastName": "Porter",
+                "image": "https://cdn1.thr.com/sites/default/files/2020/07/billy_porter.jpg",
+                "department": "Cast",
+                "role": "Pray Tell",
+                "email": "billy@pose.com"
+            },
+
+            {
+                "firstName": "Angelica",
+                "lastName": "Ross",
+                "image": "https://lesbianswhotech.org/wp-content/uploads/2019/02/Headshot.AngelicaRoss.crowdMGMT.jpg",
+                "department": "Cast",
+                "role": "Candy",
+                "email": "angelica@pose.com"
+            },
+
+            {
+                "firstName": "Janet",
+                "lastName": "Mock",
+                "image": "https://pmcvariety.files.wordpress.com/2019/06/janet-mock-16x9.jpg?w=681&h=383&crop=1",
+                "department": "Production",
+                "role": "Producer, Director, Writer",
+                "email": "janet@pose.com"
+            }
+        ]
     }
 ]
