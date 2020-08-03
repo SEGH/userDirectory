@@ -18,7 +18,10 @@ export default function Header(props) {
                 <div className="nav-content row">
                     <form className="col m3 offset-m5">
                         <div className="input-field">
-                            <input id="search" type="search" required />
+                            <input id="search" type="search" required onChange={(event) => {
+                                
+                                props.search(event);
+                            }}/>
                             <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>
                             <i className="material-icons">close</i>
                         </div>

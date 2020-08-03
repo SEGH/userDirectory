@@ -10,7 +10,8 @@ export default class App extends React.Component {
         users: currentCompany.users,
         nameOrder: 1,
         departOrder: 1,
-        roleOrder: 1
+        roleOrder: 1,
+        searchValue: ""
     }
 
     sortByColumn = (property, order) => {
@@ -47,11 +48,23 @@ export default class App extends React.Component {
         }
     }
 
+    filterBySearch = (event) => {
+        this.setState({searchValue: event.target.value});
+
+        console.log(this.state.searchValue);
+        const filteredUsers = currentCompany.users.filter(user => {
+            return user.firstName.includes(this.state.searchValue) || user.lastName.includes(this.state.searchValue) || user.department.includes(this.state.searchValue) || user.role.includes(this.state.searchValue);
+        });
+
+        console.log(filteredUsers);
+        this.setState({ users: filteredUsers });
+    }
+
     render() {
         return (
             <>
-                <Header companyName={currentCompany.company} companyLogo={currentCompany.logo} brandColor={currentCompany.brandColor} />
-                <Table users={this.state.users} columnSort={this.sortByColumn} nameOrder={this.state.nameOrder} departOrder={this.state.departOrder} roleOrder={this.state.roleOrder}/>
+                <Header companyName={currentCompany.company} companyLogo={currentCompany.logo} brandColor={currentCompany.brandColor} search={this.filterBySearch} searchValue={this.searchValue} />
+                <Table users={this.state.users} columnSort={this.sortByColumn} nameOrder={this.state.nameOrder} departOrder={this.state.departOrder} roleOrder={this.state.roleOrder} />
             </>
         )
     }
