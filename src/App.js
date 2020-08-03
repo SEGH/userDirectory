@@ -8,7 +8,7 @@ const currentCompany = Users[0];
 export default function App() {
     return (
         <>
-            <Header companyName={currentCompany.company} companyLogo={currentCompany.logo} />
+            <Header companyName={currentCompany.company} companyLogo={currentCompany.logo} brandColor={currentCompany.brandColor} />
             <Table users={currentCompany.users} />
         </>
     )

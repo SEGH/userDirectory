@@ -5,7 +5,7 @@ export default function Header(props) {
     return (
         <header>
 
-            <nav className="nav-extended indigo darken-4">
+            <nav className={"nav-extended " + props.brandColor}>
 
                 <div className="nav-wrapper">
                     <a href="http://localhost:3000/#" className="brand-logo center">
