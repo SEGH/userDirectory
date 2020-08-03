@@ -29,10 +29,10 @@ export default function Header(props) {
                         </div>
                     </form>
 
-                    <a class="btn-floating btn-large halfway-fab waves-effect waves-light" onClick={() => {
+                    <a className="btn-floating btn-large halfway-fab waves-effect waves-light" onClick={() => {
                         props.changeCompany();
                     }}>
-                        <i class="material-icons">switch_left</i>
+                        <i className="material-icons">switch_left</i>
                     </a>
                 </div>
 
