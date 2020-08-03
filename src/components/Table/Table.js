@@ -19,6 +19,8 @@ export default function Table(props) {
                 <tbody>
 
                     {props.users.map(user => {
+                        let id = props.users.indexOf(user);
+
                         let profileImage;
 
                         if (user.image === undefined) {
@@ -27,7 +29,7 @@ export default function Table(props) {
                             profileImage = user.image;
                         }
 
-                        return <User image={profileImage} firstName={user.firstName} lastName={user.lastName} department={user.department} role={user.role} email={user.email} />
+                        return <User image={profileImage} firstName={user.firstName} lastName={user.lastName} department={user.department} role={user.role} email={user.email} key={id} />
                     })}
 
                 </tbody>
