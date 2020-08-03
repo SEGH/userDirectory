@@ -60,10 +60,14 @@ export default class App extends React.Component {
         this.setState({ users: filteredUsers });
     }
 
+    clearSearch = () => {
+        this.setState({users: currentCompany.users, searchValue: "" });
+    }
+
     render() {
         return (
             <>
-                <Header companyName={currentCompany.company} companyLogo={currentCompany.logo} brandColor={currentCompany.brandColor} search={this.filterBySearch} searchValue={this.searchValue} />
+                <Header companyName={currentCompany.company} companyLogo={currentCompany.logo} brandColor={currentCompany.brandColor} search={this.filterBySearch} searchValue={this.state.searchValue} clear={this.clearSearch} />
                 <Table users={this.state.users} columnSort={this.sortByColumn} nameOrder={this.state.nameOrder} departOrder={this.state.departOrder} roleOrder={this.state.roleOrder} />
             </>
         )
