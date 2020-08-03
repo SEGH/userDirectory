@@ -28,4 +28,10 @@ form {
 
 .input-field input[type=search]:focus {
     border-radius: 30px;
+    text-align: center;
+}
+
+.input-field input[type=search] {
+    color: white;
+    text-align: center;
 }
