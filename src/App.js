@@ -53,6 +53,8 @@ export default class App extends React.Component {
             case "role":
                 this.setState({roleOrder: newOrder});
                 break;
+            default:
+                break;
         }
     }
 
