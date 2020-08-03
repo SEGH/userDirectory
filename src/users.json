@@ -1,6 +1,7 @@
 [
     {
         "company": "This Old House",
+        "brandColor": "indigo darken-4",
         "logo": "https://images-na.ssl-images-amazon.com/images/I/41PDn5i7klL.png",
         "users": [
             {
@@ -76,6 +77,7 @@
 
     {
         "company": "POSE",
+        "brandColor": "pink accent-3",
         "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/PoseTitleScreen.png/250px-PoseTitleScreen.png",
         "users": [
             {
