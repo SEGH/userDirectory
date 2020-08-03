@@ -7,30 +7,36 @@ const currentCompany = Users[0];
 
 export default class App extends React.Component {
     state = {
-        users: currentCompany.users
+        users: currentCompany.users,
+        nameOrder: 1
     }
 
-    sortByName = () => {
+    sortByName = (order) => {
+
         const sortedUsers = currentCompany.users.sort((a, b) => {
             if(a.lastName < b.lastName) {
-                return -1;
+                return -1 * order;
             } else if (a.lastName > b.lastName) {
-                return 1;
+                return 1 * order;
             } else {
-                return 0;
+                return 0 * order;
             }
 
         });
+        let newOrder = 1;
         
-        console.log(sortedUsers);
-        this.setState({ users: sortedUsers });
+        if (order === 1) {
+            newOrder = -1;
+        }
+
+        this.setState({ users: sortedUsers, nameOrder: newOrder});
     }
 
     render() {
         return (
             <>
                 <Header companyName={currentCompany.company} companyLogo={currentCompany.logo} brandColor={currentCompany.brandColor} />
-                <Table users={this.state.users} nameSort={this.sortByName}/>
+                <Table users={this.state.users} nameSort={this.sortByName} nameOrder={this.state.nameOrder}/>
             </>
         )
     }
