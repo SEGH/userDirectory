@@ -70,7 +70,7 @@ export default class App extends React.Component {
     }
 
     clearSearch = () => {
-        this.setState({users: Users[0].users, searchValue: "" });
+        this.setState({users: this.state.currentCompany.users, searchValue: "" });
     }
 
     render() {
