@@ -8,7 +8,7 @@ export default function Table(props) {
 
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th onClick={() => props.nameSort()}>Name</th>
                         <th>Department</th>
                         <th>Role</th>
                         <th>Email</th>
