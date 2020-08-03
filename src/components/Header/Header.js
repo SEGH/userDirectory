@@ -9,7 +9,7 @@ export default function Header(props) {
 
                 <div className="nav-wrapper">
                     <a href="http://localhost:3000/#" className="brand-logo center">
-                        <img src={props.companyLogo} className="circle left z-depth-5" />
+                        <img src={props.companyLogo} alt={props.companyName + " logo"} className="circle left z-depth-5" />
                         <span className="flow-text hide-on-med-and-down" id="largeTitle">{props.companyName} Directory</span>
                         <span className="flow-text hide-on-large-only">{props.companyName} Directory</span>
                     </a>
@@ -29,11 +29,11 @@ export default function Header(props) {
                         </div>
                     </form>
 
-                    <a className="btn-floating btn-large halfway-fab waves-effect waves-light" onClick={() => {
+                    <button className="btn-floating btn-large halfway-fab waves-effect waves-light" onClick={() => {
                         props.changeCompany();
                     }}>
                         <i className="material-icons">switch_left</i>
-                    </a>
+                    </button>
                 </div>
 
             </nav>
