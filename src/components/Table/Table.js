@@ -1,5 +1,6 @@
 import React from "react";
 import User from "../User/User";
+import "./table.css";
 
 export default function Table(props) {
     return (
@@ -8,9 +9,9 @@ export default function Table(props) {
 
                 <thead>
                     <tr>
-                        <th onClick={() => props.columnSort("lastName", props.nameOrder)}>Name</th>
-                        <th onClick={() => props.columnSort("department", props.departOrder)}>Department</th>
-                        <th onClick={() => props.columnSort("role", props.roleOrder)}>Role</th>
+                        <th className="pointer" onClick={() => props.columnSort("lastName", props.nameOrder)}>Name</th>
+                        <th className="pointer" onClick={() => props.columnSort("department", props.departOrder)}>Department</th>
+                        <th className="pointer" onClick={() => props.columnSort("role", props.roleOrder)}>Role</th>
                         <th>Email</th>
                     </tr>
                 </thead>
