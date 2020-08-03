@@ -35,3 +35,7 @@ form {
     color: white;
     text-align: center;
 }
+
+.halfway-fab {
+    bottom: -50px !important;
+}

@@ -28,6 +28,12 @@ export default function Header(props) {
                             }}>close</i>
                         </div>
                     </form>
+
+                    <a class="btn-floating btn-large halfway-fab waves-effect waves-light" onClick={() => {
+                        props.changeCompany();
+                    }}>
+                        <i class="material-icons">switch_left</i>
+                    </a>
                 </div>
 
             </nav>
