@@ -9,10 +9,22 @@ export default function Table(props) {
 
                 <thead>
                     <tr>
-                        <th className="pointer" onClick={() => props.columnSort("lastName", props.nameOrder)}>Name</th>
-                        <th className="pointer" onClick={() => props.columnSort("department", props.departOrder)}>Department</th>
-                        <th className="pointer" onClick={() => props.columnSort("role", props.roleOrder)}>Role</th>
-                        <th>Email</th>
+                        <th className="pointer" onClick={() => props.columnSort("lastName", props.nameOrder)}><span className="left">Name</span>
+                            {
+                                props.nameOrder === 1 ? <i className="material-icons">arrow_drop_down</i> : <i className="material-icons">arrow_drop_up</i>
+                            }
+                        </th>
+                        <th className="pointer" onClick={() => props.columnSort("department", props.departOrder)}><span className="left">Department</span>
+                            {
+                                props.departOrder === 1 ? <i className="material-icons">arrow_drop_down</i> : <i className="material-icons">arrow_drop_up</i>
+                            }
+                        </th>
+                        <th className="pointer" onClick={() => props.columnSort("role", props.roleOrder)}><span className="left">Role</span>
+                            {
+                                props.roleOrder === 1 ? <i className="material-icons">arrow_drop_down</i> : <i className="material-icons">arrow_drop_up</i>
+                            }
+                        </th>
+                        <th><span className="left">Email</span></th>
                     </tr>
                 </thead>
 
