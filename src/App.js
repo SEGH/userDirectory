@@ -17,9 +17,9 @@ export default class App extends React.Component {
 
     changeCompany = () => {
         if(this.state.currentCompany === Users[0]) {
-            this.setState({ currentCompany: Users[1], users: Users[1].users, nameOrder: 1, departOrder: 1, roleOrder: 1, searchValue: "" });
+            this.setState({ currentCompany: Users[1], users: Users[1].users, sortBy: "", nameOrder: 1, departOrder: 1, roleOrder: 1, searchValue: "" });
         } else {
-            this.setState({ currentCompany: Users[0], users: Users[0].users, nameOrder: 1, departOrder: 1, roleOrder: 1, searchValue: "" });
+            this.setState({ currentCompany: Users[0], users: Users[0].users, sortBy: "", nameOrder: 1, departOrder: 1, roleOrder: 1, searchValue: "" });
         }
     }
 
