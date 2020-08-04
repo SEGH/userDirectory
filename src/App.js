@@ -8,6 +8,7 @@ export default class App extends React.Component {
     state = {
         currentCompany: Users[0],
         users: Users[0].users,
+        sortBy: "",
         nameOrder: 1,
         departOrder: 1,
         roleOrder: 1,
@@ -35,8 +36,6 @@ export default class App extends React.Component {
 
         });
 
-        this.setState({ users: sortedUsers});
-
         let newOrder = 1;
 
         if (order === 1) {
@@ -45,13 +44,13 @@ export default class App extends React.Component {
 
         switch(property) {
             case "lastName":
-                this.setState({nameOrder: newOrder});
+                this.setState({users: sortedUsers, sortBy: "lastName", nameOrder: newOrder, departOrder: 1, roleOrder: 1});
                 break;
             case "department":
-                this.setState({departOrder: newOrder});
+                this.setState({users: sortedUsers, sortBy: "department", departOrder: newOrder, nameOrder: 1, roleOrder: 1});
                 break;
             case "role":
-                this.setState({roleOrder: newOrder});
+                this.setState({users: sortedUsers, sortBy: "role", roleOrder: newOrder, nameOrder: 1, departOrder: 1});
                 break;
             default:
                 break;
@@ -76,7 +75,7 @@ export default class App extends React.Component {
         return (
             <>
                 <Header companyName={this.state.currentCompany.company} companyLogo={this.state.currentCompany.logo} brandColor={this.state.currentCompany.brandColor} search={this.filterBySearch} searchValue={this.state.searchValue} clear={this.clearSearch} changeCompany={this.changeCompany} />
-                <Table users={this.state.users} columnSort={this.sortByColumn} nameOrder={this.state.nameOrder} departOrder={this.state.departOrder} roleOrder={this.state.roleOrder} />
+                <Table users={this.state.users} columnSort={this.sortByColumn} sortBy={this.state.sortBy} nameOrder={this.state.nameOrder} departOrder={this.state.departOrder} roleOrder={this.state.roleOrder} />
             </>
         )
     }
