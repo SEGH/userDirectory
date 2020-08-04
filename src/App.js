@@ -59,7 +59,6 @@ export default class App extends React.Component {
     }
 
     filterBySearch = (event) => {
-        console.log(event.target.value);
         let searchTerm = event.target.value;
 
         let filteredUsers = this.state.currentCompany.users.filter(user => {
@@ -67,7 +66,6 @@ export default class App extends React.Component {
         });
 
         this.setState({ users: filteredUsers, searchValue: searchTerm });
-        console.log(this.state.users);
     }
 
     clearSearch = () => {

@@ -25,12 +25,20 @@ export default function Header(props) {
                             }}>close</i>
                         </div>
                     </form>
-
-                    <button className="btn-floating btn-large halfway-fab waves-effect waves-light" onClick={() => {
-                        props.changeCompany();
-                    }}>
-                        <i className="material-icons">switch_left</i>
-                    </button>
+                    
+                    {
+                        props.companyName === "This Old House"
+                        ? <button className="btn-floating btn-large halfway-fab waves-effect waves-light" onClick={() => {
+                            props.changeCompany();
+                        }}>
+                            <i className="material-icons">switch_left</i>
+                        </button>
+                        : <button className="btn-floating btn-large halfway-fab waves-effect waves-light" onClick={() => {
+                            props.changeCompany();
+                        }}>
+                            <i className="material-icons">switch_right</i>
+                        </button>
+                    }
                 </div>
 
             </nav>
