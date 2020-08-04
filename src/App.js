@@ -16,9 +16,9 @@ export default class App extends React.Component {
 
     changeCompany = () => {
         if(this.state.currentCompany === Users[0]) {
-            this.setState({ currentCompany: Users[1], users: Users[1].users });
+            this.setState({ currentCompany: Users[1], users: Users[1].users, nameOrder: 1, departOrder: 1, roleOrder: 1, searchValue: "" });
         } else {
-            this.setState({ currentCompany: Users[0], users: Users[0].users });
+            this.setState({ currentCompany: Users[0], users: Users[0].users, nameOrder: 1, departOrder: 1, roleOrder: 1, searchValue: "" });
         }
     }
 
@@ -59,16 +59,15 @@ export default class App extends React.Component {
     }
 
     filterBySearch = (event) => {
-        this.setState({searchValue: event.target.value});
+        console.log(event.target.value);
+        let searchTerm = event.target.value;
 
-        console.log(this.state.searchValue);
-
-        const filteredUsers = this.state.users.filter(user => {
-            return user.firstName.includes(this.state.searchValue) || user.lastName.includes(this.state.searchValue) || user.department.includes(this.state.searchValue) || user.role.includes(this.state.searchValue);
+        let filteredUsers = this.state.currentCompany.users.filter(user => {
+            return user.firstName.toLowerCase().includes(searchTerm.toLowerCase()) || user.lastName.toLowerCase().includes(searchTerm.toLowerCase()) || user.department.toLowerCase().includes(searchTerm.toLowerCase()) || user.role.toLowerCase().includes(searchTerm.toLowerCase());
         });
 
-        console.log(filteredUsers);
-        this.setState({ users: filteredUsers });
+        this.setState({ users: filteredUsers, searchValue: searchTerm });
+        console.log(this.state.users);
     }
 
     clearSearch = () => {

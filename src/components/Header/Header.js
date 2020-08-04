@@ -18,10 +18,7 @@ export default function Header(props) {
                 <div className="nav-content row">
                     <form className="col m3 offset-m5">
                         <div className="input-field">
-                            <input id="search" value={props.searchValue} type="search" required onChange={(event) => {
-                                
-                                props.search(event);
-                            }}/>
+                            <input id="search" type="search" value={props.searchValue} onChange={props.search}/>
                             <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>
                             <i className="material-icons" onClick={() => {
                                 props.clear();
