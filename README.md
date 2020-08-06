@@ -2,6 +2,8 @@
 
   [![license](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
+  [Deployed Site](https://userdirectory-21128.herokuapp.com)
+
   ## Description
   This is an app created with React that allows a user to sort through a company directory. It runs in the browser and uses the Materialize CSS framework. Data is dynamically rendered from a JSON document that currently holds information for two groups.
 
